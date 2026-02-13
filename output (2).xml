@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-02-13T16:04:08.358733" rpa="false" schemaversion="5">
+<suite id="s1" name="testRF02" source="C:\Users\ASUS\Documents\SE_Year2_Term2\ML\project\Software-Testing-_Quiz02\testRF02.robot">
+<test id="s1-t1" name="Login via Office 365" line="11">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-13T16:04:08.525063" level="INFO">Opening browser 'chrome' to base url 'https://reg.up.ac.th'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-13T16:04:08.524857" elapsed="27.144299"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-13T16:04:35.669697" elapsed="0.026780"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://button[contains(., 'ยอมรับ')]</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-13T16:04:35.698105" elapsed="0.025958"/>
+</kw>
+<msg time="2026-02-13T16:04:35.724269" level="INFO">${cookie} = True</msg>
+<var>${cookie}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath://button[contains(., 'ยอมรับ')]</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-13T16:04:35.697090" elapsed="0.027227"/>
+</kw>
+<if>
+<branch type="IF" condition="${cookie}">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-13T16:04:35.724953" level="INFO">Clicking element 'xpath://button[contains(., 'ยอมรับ')]' with END.</msg>
+<arg>xpath://button[contains(., 'ยอมรับ')]</arg>
+<arg>END</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-13T16:04:35.724777" elapsed="0.296508"/>
+</kw>
+<status status="PASS" start="2026-02-13T16:04:35.724590" elapsed="0.296796"/>
+</branch>
+<status status="PASS" start="2026-02-13T16:04:35.724556" elapsed="0.296887"/>
+</if>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.js-show-header-dropdown</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-13T16:04:36.021769" elapsed="0.027439"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-13T16:04:36.050127" level="INFO">Clicking element 'css:.js-show-header-dropdown'.</msg>
+<arg>css:.js-show-header-dropdown</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-13T16:04:36.049726" elapsed="0.094082"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.btn-grad</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-13T16:04:36.144370" elapsed="0.029083"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-02-13T16:04:36.174676" level="INFO">Executing JavaScript:
+document.querySelector('.btn-grad').click()
+Without any arguments.</msg>
+<arg>document.querySelector('.btn-grad').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-02-13T16:04:36.173878" elapsed="1.419930"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:i0116</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-13T16:04:37.594114" elapsed="1.273069"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-13T16:04:38.867942" level="INFO">Typing text '67022692@up.ac.th' into text field 'id:i0116'.</msg>
+<arg>id:i0116</arg>
+<arg>${USER_EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-13T16:04:38.867639" elapsed="0.115946"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-13T16:04:38.984054" level="INFO">Clicking element 'id:idSIButton9'.</msg>
+<arg>id:idSIButton9</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-13T16:04:38.983898" elapsed="0.060926"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:i0118</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-13T16:04:39.045111" elapsed="1.072193"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-13T16:04:41.118514" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-13T16:04:40.117764" elapsed="1.000886"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2026-02-13T16:04:41.119113" level="INFO">Typing password into text field 'id:i0118'.</msg>
+<msg time="2026-02-13T16:04:41.135200" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id:i0118</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-13T16:04:41.118898" elapsed="0.040951"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-13T16:04:41.160399" level="INFO">Clicking element 'id:idSIButton9'.</msg>
+<arg>id:idSIButton9</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-13T16:04:41.160174" elapsed="0.443991"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Approve sign in request</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-02-13T16:04:41.604784" elapsed="4.022138"/>
+</kw>
+<msg time="2026-02-13T16:04:45.627073" level="INFO">${is_mfa} = True</msg>
+<var>${is_mfa}</var>
+<arg>Wait Until Page Contains</arg>
+<arg>Approve sign in request</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-13T16:04:41.604460" elapsed="4.022637"/>
+</kw>
+<if>
+<branch type="IF" condition="${is_mfa}">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>MFA detected! Please approve on your phone...</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-13T16:04:45.627662" elapsed="0.000412"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-13T16:04:55.628733" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-13T16:04:45.628171" elapsed="10.000654"/>
+</kw>
+<status status="PASS" start="2026-02-13T16:04:45.627452" elapsed="10.001430"/>
+</branch>
+<status status="PASS" start="2026-02-13T16:04:45.627406" elapsed="10.001609"/>
+</if>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>id:idSIButton9</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-02-13T16:04:55.629936" elapsed="0.004208"/>
+</kw>
+<msg time="2026-02-13T16:04:55.634254" level="INFO">${stay_in} = True</msg>
+<var>${stay_in}</var>
+<arg>Wait Until Page Contains Element</arg>
+<arg>id:idSIButton9</arg>
+<arg>timeout=15s</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-13T16:04:55.629476" elapsed="0.004796"/>
+</kw>
+<if>
+<branch type="IF" condition="${stay_in}">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:idSIButton9</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-13T16:04:55.634552" elapsed="0.008959"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-13T16:04:56.644520" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-13T16:04:55.643749" elapsed="1.000897"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-02-13T16:04:56.645271" level="INFO">Executing JavaScript:
+document.querySelector('#idSIButton9').click()
+Without any arguments.</msg>
+<arg>document.querySelector('#idSIButton9').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-02-13T16:04:56.644853" elapsed="1.431103"/>
+</kw>
+<status status="PASS" start="2026-02-13T16:04:55.634442" elapsed="2.441577"/>
+</branch>
+<status status="PASS" start="2026-02-13T16:04:55.634421" elapsed="2.441632"/>
+</if>
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<arg>reg.up.ac.th</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" start="2026-02-13T16:04:58.076216" elapsed="0.192396"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>ออกจากระบบ</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-02-13T16:04:58.268928" elapsed="0.010971"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-13T16:04:58.512116" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="login_success.png"&gt;&lt;img src="login_success.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>filename=login_success.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-13T16:04:58.280216" elapsed="0.232018"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Screenshot saved as login_success.png</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-13T16:04:58.512627" elapsed="0.000352"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-13T16:04:58.513558" elapsed="2.167028"/>
+</kw>
+<status status="PASS" start="2026-02-13T16:04:08.524173" elapsed="52.156703"/>
+</test>
+<status status="PASS" start="2026-02-13T16:04:08.360001" elapsed="52.321588"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="testRF02" id="s1" pass="1" fail="0" skip="0">testRF02</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
